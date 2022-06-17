@@ -1,6 +1,13 @@
-import { BaseEntity, Column, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  BaseEntity,
+  Column,
+  Entity,
+  OneToMany,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
 import { StockDecreaseLog } from './stock-decrease-log.entity';
 
+@Entity()
 export class Product extends BaseEntity {
   @PrimaryGeneratedColumn()
   public id!: number;

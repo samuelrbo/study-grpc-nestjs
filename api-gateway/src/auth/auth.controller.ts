@@ -35,7 +35,7 @@ export class AuthController implements OnModuleInit {
     return this.service.register(body);
   }
 
-  @Put('login')
+  @Post('login')
   public async login(
     @Body() body: LoginRequest,
   ): Promise<Observable<LoginResponse>> {
